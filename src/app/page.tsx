@@ -18,7 +18,7 @@ export default async function Home() {
           Join us for updates on our journey, and be the first one to be notified to try our product for <span className="font-bold">free!</span>
         </p>
         <Form />
-        <span className="text-gray-500 italic">Not convinced? Scroll to learn more!</span>
+        {/* <span className="text-gray-500 italic">Not convinced? Scroll to learn more!</span> */}
       </div>
 
       <div className="relative h-full flex items-center justify-center overflow-hidden">
