@@ -5,7 +5,7 @@ import Form from "./components/Form";
 import "./globals.css";
 
 export default async function Home() {
-  const users = await prisma.user.findMany();
+  // const users = await prisma.user.findMany();
 
   return (
     <main className="grid grid-cols-1 md:grid-cols-auto md:grid-flow-col h-screen font-poppins">
