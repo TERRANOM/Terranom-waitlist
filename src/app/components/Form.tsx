@@ -11,6 +11,7 @@ interface FormData {
 function Form() {
   const [formData, setFormData] = useState<FormData>({ name: "", email: "" });
   const [success, setSuccess] = useState<boolean | null>(null);
+  const [repeat, setRepeat] = useState<boolean | null>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -27,14 +28,20 @@ function Form() {
     try {
       const query = new URLSearchParams(formData as unknown as Record<string, string>).toString();
       const response = await fetch(`/api/add-people?${query}`);
-
+      console.log(response)
       const result = await response.json();
-      if (result.status = 200) {
+      console.log(result)
+      if (response.status == 200) {
         console.log("Form submitted successfully!");
         setSuccess(true);
-      } else {
+        setRepeat(false)
+      } else if (result.error.code == 23505){
         console.log("Form submission failed.");
         setSuccess(false);
+        setRepeat(true)
+      } else {
+        setSuccess(false)
+        setRepeat(false)
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -47,8 +54,11 @@ function Form() {
       {success === true && (
         <div className="text-green-600 mb-4">Form submitted successfully!</div>
       )}
-      {success === false && (
-        <div className="text-red-600 mb-4">Form submission failed. Please try again.</div>
+      {success === false && repeat === true && (
+        <div className="text-red-600 mb-4">Email already exists in the database.</div>
+      )}
+      {success === false && repeat === false && (
+        <div className="text-red-600 mb-4">Form submission failed, please try again later.</div>
       )}
       <form onSubmit={handleSubmit} className="flex flex-wrap gap-4 w-full md:w-3/4">
         <input
