@@ -11,6 +11,9 @@ const config: Config = {
       backgroundImage: {
         'gradient': "url('/img/gradient.png')",
       },
+      colors : {
+        'background-gray' : '#DCDEDD',
+      },
     },
   },
   plugins: [],
