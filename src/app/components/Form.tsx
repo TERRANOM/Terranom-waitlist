@@ -28,20 +28,20 @@ function Form() {
     try {
       const query = new URLSearchParams(formData as unknown as Record<string, string>).toString();
       const response = await fetch(`/api/add-people?${query}`);
-      console.log(response)
+      console.log(response);
       const result = await response.json();
-      console.log(result)
+      console.log(result);
       if (response.status == 200) {
         console.log("Form submitted successfully!");
         setSuccess(true);
-        setRepeat(false)
-      } else if (result.error.code == 23505){
+        setRepeat(false);
+      } else if (result.error?.code == 23505) {
         console.log("Form submission failed.");
         setSuccess(false);
-        setRepeat(true)
+        setRepeat(true);
       } else {
-        setSuccess(false)
-        setRepeat(false)
+        setSuccess(false);
+        setRepeat(false);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -79,7 +79,7 @@ function Form() {
           className="p-2 border border-gray-300 rounded w-full"
           required
         />
-        <button type="submit" className="text-3xl btn p-4 text-green-800 w-full">
+        <button type="submit" className="text-lg md:text-3xl btn p-4 text-green-800 w-full">
           Join the waitlist
         </button>
       </form>
