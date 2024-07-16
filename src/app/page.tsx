@@ -47,9 +47,13 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="justify-center object-center text-center">
-          <p className="inline-block text-8xl text-corals-red font-black text-left w-5/6 py-28 leading-tight">We want to revolutionize the <span className="text-deeps-green">agriculture</span> industry.</p>
+        <div className="flex justify-center items-center text-center">
+          <p className="text-3xl md:text-8xl lg:text-8xl text-corals-red font-black text-left w-full md:w-5/6 py-12 md:py-28 pl-4 leading-tight md:leading-tight lg:leading-tight">
+            We want to revolutionize the <span className="text-deeps-green">agriculture</span> industry.
+          </p>
         </div>
+
+
       </div>
 
       <Footer>
