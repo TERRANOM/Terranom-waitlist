@@ -2,6 +2,7 @@
 import Image from "next/image";
 import prisma from "@/app/lib/db";
 import Form from "./components/Form";
+import Footer from "./components/Footer";
 import "./globals.css";
 
 export default async function Home() {
@@ -45,7 +46,15 @@ export default async function Home() {
             </div>
           </div>
         </div>
+
+        <div className="justify-center object-center text-center">
+          <p className="inline-block text-8xl text-corals-red font-black text-left w-5/6 py-28 leading-tight">We want to revolutionize the <span className="text-deeps-green">agriculture</span> industry.</p>
+        </div>
       </div>
+
+      <Footer>
+        
+      </Footer>
     </div>
   );
 }

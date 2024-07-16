@@ -13,6 +13,9 @@ const config: Config = {
       },
       colors : {
         'background-gray' : '#DCDEDD',
+        'corals-red': "#C25C49",
+        'deeps-green':"#1C5739",
+        'background-green':"#475B51"
       },
     },
   },
