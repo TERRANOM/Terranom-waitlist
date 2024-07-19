@@ -10,12 +10,15 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient': "url('/img/gradient.png')",
+        'green-bg':"url('/img/green_bg.png')",
       },
       colors : {
         'background-gray' : '#DCDEDD',
         'corals-red': "#C25C49",
         'deeps-green':"#1C5739",
-        'background-green':"#475B51"
+        'background-green':"#475B51",
+        'big-green':"#DCDEDD",
+        'small-green':'#91AFA0',
       },
     },
   },

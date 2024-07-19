@@ -26,7 +26,7 @@ export default async function Home() {
       </main>
 
       <div className='bg-background-gray md:h-auto object-contain m-0'>
-        <div className="bg-[url('/img/green_bg.png')] bg-bottom sm:bg-contain mb:bg-cover bg-no-repeat bg-repeat-x h-full">
+        <div className="h-full bg-background-green md:bg-transparent md:bg-green-bg md:bg-bottom md:bg-contain md:bg-repeat-x">
           <div className="pb-16">
             <p className="font-[Inter] text-center text-3xl md:text-5xl text-white p-8 md:p-16 font-bold">HOW?</p>
 
@@ -34,14 +34,18 @@ export default async function Home() {
               <div className="flex flex-col items-center">
                 <img src="/img/emerging_tech.png" className="object-scale-down max-w-full"></img>
                 <p className="text-white font-bold text-xl md:text-2xl pt-4">Emerging Technologies</p>
+                <p className="text-white px-24 font-thin py-2 text-base md:text-lg">Using Machine Learning models to make suggestions based upon previous data</p>
+
               </div>
               <div className="flex flex-col items-center">
                 <img src="/img/affordable.png" className="object-scale-down max-w-full"></img>
                 <p className="text-white font-bold text-xl md:text-2xl pt-4">Affordable</p>
+                <p className="text-white px-24 font-thin py-2 text-base md:text-lg">We have a shared system, making high-end costs such as drones and anaysis accessible to anyone.</p>
               </div>
               <div className="flex flex-col items-center">
                 <img src="/img/efficient.png" className="object-scale-down max-w-full"></img>
                 <p className="text-white font-bold text-xl md:text-2xl pt-4">Crop Efficiency</p>
+                <p className="text-white px-24 font-thin py-2 text-base md:text-lg">Our data collection paired with predicitive analysis Is the perfect solution for farming efficiency</p>
               </div>
             </div>
           </div>
@@ -56,9 +60,7 @@ export default async function Home() {
 
       </div>
 
-      <Footer>
-        
-      </Footer>
+      <Footer></Footer>
     </div>
   );
 }
